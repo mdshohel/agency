@@ -1,0 +1,91 @@
+/* 06.05. Home Five Intro CSS */
+
+.intro5-section {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    padding: 50px 0;
+
+    & .container {
+        z-index: 9;
+    }
+
+    & .section-bottom-shape {
+        transform: rotateX(180deg);
+    }
+
+    @media #{$large-mobile} {
+        height: auto;
+
+        background-position: left top;
+    }
+}
+
+.intro5-content {
+    max-width: 760px;
+    // Responsive
+    @media #{$tablet-device}{
+        padding: 140px 15px 40px;
+    }
+    @media #{$large-mobile}{
+        padding: 140px 15px 40px;
+        max-width: 100%;
+    }
+    & .title {
+        font-size: 72px;
+        line-height: 1;
+        color: $white;
+        margin-bottom: 40px;
+    }
+
+    & .desc {
+        max-width: 700px;
+
+        & p {
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 1.67;
+            color: $white;
+        }
+    }
+
+    & .btn {
+        margin-top: 60px;
+    }
+
+    & .link{
+        display: block;
+        font-size: 15px;
+        margin-top: 25px;
+    }
+
+    @media #{$tablet-device,
+    $large-mobile
+    } {
+        & .title {
+            font-size: 36px;
+        }
+
+        & .desc {
+            & p {
+                font-size: 16px;
+            }
+        }
+    }
+
+    @media #{$extra-small-mobile} {
+
+        & .title {
+            font-size: 30px;
+        }
+
+        & .desc {
+            & p {
+                font-size: 14px;
+            }
+        }
+    }
+}
+
